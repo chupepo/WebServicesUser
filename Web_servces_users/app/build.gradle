@@ -32,6 +32,18 @@ dependencies {
     //compile (group: 'org.apache.httpcomponents' , name: 'httpmime' , version: '4.3.5') {
     //    exclude module: 'org.apache.httpcomponents:httpclient'
     //}
-    compile 'org.jbundle.util.osgi.wrapped:org.jbundle.util.osgi.wrapped.org.apache.http.client:4.1.2'
-    compile files('C:/Users/pc1/AndroidStudioProjects/WebServicesUser/Web_servces_users/librerias/gson-1.4.jar')
+    //compile 'org.jbundle.util.osgi.wrapped:org.jbundle.util.osgi.wrapped.org.apache.http.client:4.1.2'
+    //compile 'com.squareup.retrofit:retrofit:1.9.0'
+    //compile 'com.squareup.okhttp:okhttp-urlconnection:2.0.0'
+    //compile 'com.squareup.okhttp:okhttp:2.0.0'
+    //compile 'com.squareup.okio:okio:1.0.1'
+    //compile 'com.google.guava:guava:16.0.1'
+    //compile 'joda-time:joda-time:2.3'
+    //compile 'org.parceler:parceler:0.2.13'
+    //compile 'com.google.api-client:google-api-client:1.19.1'
+    //compile files('C:/Users/pc1/AndroidStudioProjects/WebServicesUser/Web_servces_users/librerias/retrofit-2.0.0-beta4.jar')
+    //compile files('C:/Users/pc1/AndroidStudioProjects/WebServicesUser/Web_servces_users/librerias/retrofit-1.1.0-sources.jar')
+    compile files('libs/gson-1.4.jar')
+    compile files('retrofit-1.9.0.jar')
+    compile files('libs/retrofit-1.9.0.jar')
 }
