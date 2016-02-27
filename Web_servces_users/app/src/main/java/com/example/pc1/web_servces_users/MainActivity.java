@@ -8,14 +8,11 @@ import android.view.Menu;
 import android.view.View;
 import android.widget.AbsListView;
 import android.widget.AdapterView;
-import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TextView;
 import android.widget.Toast;
-import java.io.InputStream;
 import java.util.ArrayList;
 import java.util.List;
-import org.json.JSONObject;
 import res.ClienteRest;
 import res.ClienteService;
 import retrofit.Callback;
@@ -70,16 +67,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                         @Override
                         public void success(List<ClienteRest> clienteRests, Response response) {
 
-                            // ArrayList<ClienteRest> arrayClentest = runListClientesResAndGetTheTenClientesRest(clienteRests);
 
-                            ClsListViewAdapter clsListViewAdapter = new ClsListViewAdapter(clienteRests, getApplicationContext());
-
-                            int position = (int) view2.getItemIdAtPosition(totalItemCount2 - 1);
-
-                            //View getView = clsListViewAdapter.getView(position, null, null);
-                            //for (int i=0;i<list.getCount();i++){
-                            //    list.getItem(i);
-                            //}
                         }
 
                         @Override
@@ -88,7 +76,7 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
                         }
                     });
                     //view.getItemIdAtPosition(totalItemCount-1)
-                    Toast.makeText(MainActivity.this, list.getCount() + "", Toast.LENGTH_SHORT).show();
+                    Toast.makeText(MainActivity.this, "Ejemplo del ScrollListener", Toast.LENGTH_SHORT).show();
                 }
             }
         });
@@ -128,10 +116,11 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
             public void success(List<ClienteRest> clienteRests, Response response) {
                 List<ClienteRest> arrayClienteList = new ArrayList<ClienteRest>();
 
-                ArrayList<ClienteRest> arrayClentest = runListClientesResAndGetTheTenClientesRest(clienteRests);
+                /*Este metodo carga los primeros 10 elementos del web service*/
+                //ArrayList<ClienteRest> arrayClentest = runListClientesResAndGetTheTenClientesRest(clienteRests);
 
                 //list.setAdapter(clsListViewAdapter)
-                clsListViewAdapter = new ClsListViewAdapter(arrayClentest, getApplicationContext());
+                clsListViewAdapter = new ClsListViewAdapter(clienteRests, getApplicationContext());
 
                 list.setAdapter(clsListViewAdapter);
                 list.setOnItemClickListener(MainActivity.this);
@@ -223,5 +212,3 @@ public class MainActivity extends AppCompatActivity implements AdapterView.OnIte
         return ArrayListCliente;
     }
 }
-
-
