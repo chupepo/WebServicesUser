@@ -46,4 +46,5 @@ dependencies {
     compile files('libs/gson-1.4.jar')
     compile files('retrofit-1.9.0.jar')
     compile files('libs/retrofit-1.9.0.jar')
+    compile 'com.squareup.picasso:picasso:2.5.2'
 }

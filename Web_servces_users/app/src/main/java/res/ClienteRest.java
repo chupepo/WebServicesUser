@@ -4,8 +4,9 @@ package res;
  * Created by pc1 on 25/02/2016.
  */
 public class ClienteRest {
-    private String login;
+    /*Se cren los atributos de la clase*/
     private int id;
+    private String login;
     private String type;
     private String site_admin;
     private String avatar_url;
@@ -21,6 +22,9 @@ public class ClienteRest {
     private String repos_url;
     private String events_url;
     private String received_events_url;
+
+
+    /*Se crean los metodos getters and setter*/
 
     public String getLogin() {
         return login;
@@ -161,8 +165,8 @@ public class ClienteRest {
     @Override
     public String toString() {
         return "ClienteRest{" +
-                "login='" + login + '\'' +
-                ", id='" + id + '\'' +
+                "id=" + id +
+                ", login='" + login + '\'' +
                 ", type='" + type + '\'' +
                 ", site_admin='" + site_admin + '\'' +
                 ", avatar_url='" + avatar_url + '\'' +
